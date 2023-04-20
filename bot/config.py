@@ -23,7 +23,7 @@ try:
     OWNER = config("OWNER", default="5074446156")
     FFMPEG = config(
         "FFMPEG",
-        default='ffmpeg -i "{}" -map 0:v? -map 0:a? -map 0:s? -c:v libx265 -pix_fmt yuv420p10le -preset slow -color_primaries 1 -color_range 1 -color_trc 1 -colorspace 1 -vf scale=1280:720,"drawtext=fontfile=/content/drive/MyDrive/Font/A.ttf:text=Encoded By @Ani_Animesh:x=1040:y=650:fontsize=10:fontcolor=white:enable=between(t\,400\,540)" -x265-params me=3:rd=4:subme=3:aq-mode=3:aq-strength=1:deblock=1,1:psy-rd=1:psy-rdoq=1:bframes=8:frame-threads=4 -crf 23 -c:a aac -b:a 112k -c:s copy -metadata title="Presented By Ani Animesh" -metadata author="AnimeSakura.co" -metadata copyright="Copyright 2023 Me" -metadata encoded_by="Lolikiller #Sakura_Gang" -metadata:s:0 title="720p x265 10bit AAc" -metadata:s:a:0 title="Ani Animesh" -metadata:s:a:1 title="AnimeSakura.co" -metadata:s:s:0 title="AnimeSakura.co" -metadata:s:s:1 title="@Ani_Animesh" "{}"',
+        default='ffmpeg -i "{}" -map 0:v? -map 0:a? -map 0:s? -c:v libsvtav1 -pix_fmt yuv420p10le -preset 6 -color_primaries 1 -color_range 1 -color_trc 1 -colorspace 1 -s 1280:720 -svtav1-params "tune=1:pass=0:film-grain=4:keyint=240:profile=0:lp=4:enable-hdr=1"  -crf 30 -c:a aac -b:a 96k -c:s copy -metadata title="Presented By Ani Animesh" -metadata author="AnimeSakura.co" -metadata copyright="Copyright 2023 Me" -metadata encoded_by="Lolikiller #Sakura_Gang" -metadata:s:0 title="Encoded By Ani Animesh" -metadata:s:a:0 title="Ani Animesh" -metadata:s:a:1 title="AnimeSakura.co" -metadata:s:s:0 title="AnimeSakura.co" -metadata:s:s:1 title="@Ani_Animesh" "{}"',
     )
     THUMB = config(
         "THUMBNAIL", default="https://graph.org/file/a615291ef3f9f361e9b12.jpg"
